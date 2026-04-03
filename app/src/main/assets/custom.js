@@ -24,13 +24,29 @@ const hookClick = (e) => {
     if (origin.hasAttribute('download')) {
         e.preventDefault()
         console.log('handle download', origin.href, origin.download)
+        // 手动触发下载
+        const a = document.createElement('a')
+        a.href = origin.href
+        a.download = origin.download || ''
+        a.style.display = 'none'
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
         return
     }
 
-    // 处理 Blob URL（数据导出）
+    // 处理 Blob URL（PDF/JSON 导出）
     if (origin.href.startsWith('blob:')) {
         e.preventDefault()
         console.log('handle blob download', origin.href)
+        // 手动触发下载
+        const a = document.createElement('a')
+        a.href = origin.href
+        a.download = ''
+        a.style.display = 'none'
+        document.body.appendChild(a)
+        a.click()
+        document.body.removeChild(a)
         return
     }
 
