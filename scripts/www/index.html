@@ -15,13 +15,39 @@
       min-height: 100vh;
       background: #0a0a1a;
     }
+    /* 加载提示 */
+    #loading {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: #0a0a1a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 16px;
+      z-index: 9999;
+    }
   </style>
-  <!-- PakePlus Android WebView Hook -->
-  <script src="./pake-hook.js"></script>
-  <script type="module" crossorigin src="./assets/index-Dovr7pHh.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bl6tbi4f.css">
+  <script type="module" crossorigin src="./assets/index-kgHM42J5.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-IJyzvBuT.css">
 </head>
 <body>
+  <div id="loading">加载中...</div>
   <div id="app"></div>
+  <script>
+    // 豹小秘mini 兼容性处理
+    window.onerror = function(msg, url, line) {
+      console.error('Error: ' + msg + '\nURL: ' + url + '\nLine: ' + line);
+      document.getElementById('loading').innerHTML = '加载出错，请刷新重试';
+      return false;
+    };
+    // 隐藏加载提示
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        var loading = document.getElementById('loading');
+        if (loading) loading.style.display = 'none';
+      }, 500);
+    });
+  </script>
 </body>
 </html>
