@@ -212,6 +212,14 @@ window.pakeDownload = {
     }
 }
 
+// APK 应用信息（从 AndroidManifest.xml 获取的真实值）
+window.PakeAppInfo = {
+    packageName: 'com.pakeplus.cn',
+    mainActivity: 'com.pakeplus.cn.MainActivity',
+    versionName: '1.0.0',
+    versionCode: 1
+}
+
 // 延迟绑定，确保 Vue 先初始化
 document.addEventListener('DOMContentLoaded', () => {
     // 使用 setTimeout 确保在 Vue 之后绑定
