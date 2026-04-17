@@ -1,0 +1,1 @@
+System.register(["./index-legacy-CtRtqZ_D.js"],function(e,t){"use strict";var n;return{setters:[e=>{n=e.Y}],execute:function(){e("u",()=>{var e;const{scopeId:t}=(null==(e=n())?void 0:e.vnode)||{};return t?{[t]:""}:null})}}});
