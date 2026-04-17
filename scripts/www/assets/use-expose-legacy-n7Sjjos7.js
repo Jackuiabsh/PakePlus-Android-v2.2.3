@@ -1,0 +1,1 @@
+System.register(["./index-legacy-CEmO-wTC.js","./index-legacy-CZVw_4kB.js"],function(e,t){"use strict";var n,s;return{setters:[e=>{n=e.j},e=>{s=e.Y}],execute:function(){e("u",function(e){const t=s();t&&n(t.proxy,e)})}}});
