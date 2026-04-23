@@ -1,0 +1,1 @@
+System.register(["./index-legacy-2LcRMJKe.js","./index-legacy-DaOqSxAk.js"],function(e,t){"use strict";var n,s;return{setters:[e=>{n=e.j},e=>{s=e.Y}],execute:function(){e("u",function(e){const t=s();t&&n(t.proxy,e)})}}});
